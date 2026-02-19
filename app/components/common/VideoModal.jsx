@@ -12,8 +12,7 @@ export default function VideoModal({ open, onClose }) {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.4 }}
           className="fixed inset-0 z-[9999] "
-        >
-          {/* CLOSE BUTTON – IMAGE STYLE */}
+        > 
          <button
   onClick={onClose}
   className="absolute top-6 right-6 z-30 flex items-center gap-2 text-sm uppercase tracking-wider text-white opacity-80 hover:opacity-100 cursor-pointer"
@@ -38,8 +37,7 @@ export default function VideoModal({ open, onClose }) {
   </span>
 </button>
 
-
-          {/* VIDEO FULLSCREEN */}
+ 
           <div className="w-full h-full flex items-center justify-center">
             <video
               src="/assest/herovideo.mp4"

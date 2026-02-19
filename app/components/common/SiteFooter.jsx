@@ -4,7 +4,7 @@ export default function SiteFooter() {
   return (
     <footer className="relative w-full min-h-[40vh] bg-[#d8d8d8] text-[#312e2e] px-12 py-10 overflow-hidden">
 
-      {/* Main Content */}
+ 
       <div className="w-full h-full flex flex-col items-center justify-center text-center">
 
         <h3 className="text-lg md:text-[1vw] font-semibold tracking-wide mb-6 uppercase">
@@ -28,14 +28,13 @@ export default function SiteFooter() {
         </a>
       </div>
 
-      {/* Bottom Copyright */}
+      
       <div className="w-full absolute bottom-0 left-0 py-10 md:py-6 flex justify-center items-center">
         <p className="text-sm text-[#312e2e]/70">
           © Celebso Production 2025
         </p>
       </div>
-
-      {/* Floating Social Icons */}
+ 
       <div className="fixed bottom-4 right-4 flex gap-6 z-40">
 
         <SocialIcon>
@@ -58,9 +57,7 @@ export default function SiteFooter() {
     </footer>
   );
 }
-
-/* ================= Social Wrapper ================= */
-
+ 
 function SocialIcon({ children }) {
   return (
     <a

@@ -8,7 +8,7 @@ export default function AboutWhatWeDo() {
 
       <div className="grid md:grid-cols-2 gap-14">
         
-        {/* Item 1 */}
+       
         <div className="border-t pt-6">
           <h3 className="text-2xl font-semibold mb-3 text-[#312e2e]">
             Artist Branding
@@ -19,7 +19,7 @@ export default function AboutWhatWeDo() {
           </p>
         </div>
 
-        {/* Item 2 */}
+        
         <div className="border-t pt-6">
           <h3 className="text-2xl font-semibold mb-3 text-[#312e2e]">
             Media &amp; Content Production
@@ -29,8 +29,7 @@ export default function AboutWhatWeDo() {
             premium platforms.
           </p>
         </div>
-
-        {/* Item 3 */}
+ 
         <div className="border-t pt-6">
           <h3 className="text-2xl font-semibold mb-3 text-[#312e2e]">
             Celebrity &amp; Influencer Access
@@ -40,8 +39,7 @@ export default function AboutWhatWeDo() {
             networks.
           </p>
         </div>
-
-        {/* Item 4 */}
+ 
         <div className="border-t pt-6">
           <h3 className="text-2xl font-semibold mb-3 text-[#312e2e]">
             International Representation

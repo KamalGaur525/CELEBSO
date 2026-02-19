@@ -98,7 +98,7 @@ export default function ServicesList() {
             key={index}
             className="grid md:grid-cols-[1fr_2fr] gap-12 border-t border-[#312e2e]/20 pt-16"
           >
-            <h3 className="text-2xl md:text-3xl font-semibold leading-tight text-[#312e2e]">
+            <h3 className="text-2xl md:text-3xl font-medium leading-tight text-[#312e2e]">
               {service.title}
             </h3>
 

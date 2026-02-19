@@ -2,14 +2,13 @@ export default function AboutMission() {
   return (
     <section>
       <div className="max-w-7xl mx-auto px-6 py-24">
-        
+
         <h2 className="text-4xl font-bold mb-16 text-center text-[#312e2e]">
           Our Mission
         </h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-          
-          {/* Mission 01 */}
+ 
           <div className="p-6 border-b border-[#fcb900]">
             <span className="text-4xl font-extrabold text-[#fcb900]/50">
               01
@@ -19,7 +18,7 @@ export default function AboutMission() {
             </p>
           </div>
 
-          {/* Mission 02 */}
+         
           <div className="p-6 border-b border-[#fcb900]">
             <span className="text-4xl font-extrabold text-[#fcb900]/50">
               02
@@ -29,7 +28,7 @@ export default function AboutMission() {
             </p>
           </div>
 
-          {/* Mission 03 */}
+ 
           <div className="p-6 border-b border-[#fcb900]">
             <span className="text-4xl font-extrabold text-[#fcb900]/50">
               03
@@ -39,7 +38,6 @@ export default function AboutMission() {
             </p>
           </div>
 
-          {/* Mission 04 */}
           <div className="p-6 border-b border-[#fcb900]">
             <span className="text-4xl font-extrabold text-[#fcb900]/50">
               04

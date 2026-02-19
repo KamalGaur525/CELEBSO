@@ -14,16 +14,12 @@ export default function LiveExperience() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative max-w-[1200px] mx-auto rounded-[28px] overflow-hidden bg-gradient-to-br from-[#1b1b1b] via-[#121212] to-black border border-white/10"
       >
-
-        {/* Glow Effect */}
+ 
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#fcb900]/20 blur-[120px]"></div>
-        </div>
-
-        {/* Content */}
+        </div> 
         <div className="relative z-10 px-10 md:px-20 py-20 flex flex-col md:flex-row justify-between items-center gap-10">
-
-          {/* Text Content */}
+ 
           <div className="max-w-2xl text-center md:text-left">
 
             <p className="text-sm uppercase tracking-[0.3em] text-white/50">
@@ -43,8 +39,7 @@ export default function LiveExperience() {
             </p>
 
           </div>
-
-          {/* Button */}
+ 
           <div>
             <Link
               href="#"

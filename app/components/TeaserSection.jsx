@@ -8,24 +8,21 @@ export default function TeaserSection() {
   return (
     <>
     <section className="relative w-full min-h-screen bg-[#f7f7f5] flex flex-col items-center justify-center overflow-hidden py-20">
-
-      {/* Statement Text */}
+ 
       <div className="max-w-4xl text-center px-6 mb-40">
         <h2 className="text-[6vw] md:text-[2.6vw] leading-tight font-normal text-[#312e2e]">
           Celebso Enterprises empowers artists to step into the spotlight —
           supporting talent, shaping presence, and connecting creativity with millions.
         </h2>
-      </div>
-
-      {/* Circle Outline */}
+      </div> 
       <div className="absolute w-[580px] h-[580px] rounded-full border border-black/10 pointer-events-none"></div>
 
-      {/* PLAY Text */}
-      <span className="absolute left-1/2 -translate-x-[215px] md:-translate-x-[370px] -translate-y-[100px] flex items-center uppercase text-black/20 text-7xl font-medium">
+     
+      <span className="absolute left-1/2 -translate-x-[215px] md:-translate-x-[370px] -translate-y-[100px] flex items-center uppercase text-black/20 text-7xl font-light">
         Play
         <svg
           viewBox="0 0 512 512"
-          className="text-[#fcb900] opacity-60 ml-2"
+          className="text-[#fcb900] opacity-60 "
           height="70"
           width="70"
           fill="currentColor"
@@ -33,13 +30,11 @@ export default function TeaserSection() {
           <path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm83.8 211.9l-137.2 83c-2.9 1.8-6.7-.4-6.7-3.9V173c0-3.5 3.7-5.7 6.7-3.9l137.2 83c2.9 1.7 2.9 6.1 0 7.8z" />
         </svg>
       </span>
-
-      {/* TEASER Text */}
-      <span className="absolute left-1/2 translate-x-[25px] md:translate-x-[140px] -translate-y-[100px] uppercase text-black/20 text-7xl font-medium">
+ 
+      <span className="absolute left-1/2 translate-x-[25px] md:translate-x-[140px] -translate-y-[100px] uppercase text-black/20 text-7xl font-light">
         Teaser
       </span>
-
-      {/* Video Card */}
+ 
       <div   onClick={() => setOpenVideo(true)}
        className="relative z-10 w-[300px] h-[450px] aspect-video rounded-lg overflow-hidden cursor-pointer shadow-lg group transition duration-300 hover:scale-105">
 
@@ -51,11 +46,9 @@ export default function TeaserSection() {
           playsInline
           className="w-full h-full object-cover"
         />
-
-        {/* Overlay */}
+ 
         <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition"></div>
-
-        {/* Play Icon */}
+ 
         <span className="absolute bottom-2 left-2 text-white text-sm">
           <svg
             viewBox="0 0 512 512"
@@ -66,8 +59,7 @@ export default function TeaserSection() {
             <path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm83.8 211.9l-137.2 83c-2.9 1.8-6.7-.4-6.7-3.9V173c0-3.5 3.7-5.7 6.7-3.9l137.2 83c2.9 1.7 2.9 6.1 0 7.8z" />
           </svg>
         </span>
-
-        {/* Duration */}
+ 
         <span className="absolute bottom-2 right-2 text-white text-sm">
           00:48
         </span>

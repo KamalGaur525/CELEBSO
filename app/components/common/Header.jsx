@@ -11,61 +11,58 @@ export default function Header() {
     <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-full max-w-[1100px] px-4">
       <div className="relative overflow-hidden rounded-2xl bg-gradient-to-b from-[#2c2c2c] to-[#1f1f1f] text-white shadow-2xl">
 
-        {/* Top Bar */}
+       
         <div className="flex items-center justify-between px-6 py-4">
+ 
+          <button
+            onClick={() => setOpen(!open)}
+            className="flex items-center gap-4 text-sm tracking-wide cursor-pointer z-50"
+          >
+        
+            <div className="relative flex items-center justify-center w-6 h-6">
 
-          {/* Menu Button */}
-        {/* Menu Button with Animate Icon */}
-    <button
-  onClick={() => setOpen(!open)}
-  className="flex items-center gap-4 text-sm tracking-wide cursor-pointer z-50"
->
-  {/* ICON */}
-  <div className="relative flex items-center justify-center w-6 h-6">
-    
-    <motion.span
-      animate={open ? { rotate: 45, y: 0 } : { rotate: 0, y: -5 }}
-      transition={{
-        type: "spring",
-        stiffness: 260,
-        damping: 22,
-      }}
-      className="absolute w-5 h-[1.5px] bg-white origin-center"
-    />
+              <motion.span
+                animate={open ? { rotate: 45, y: 0 } : { rotate: 0, y: -5 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 22,
+                }}
+                className="absolute w-5 h-[1.5px] bg-white origin-center"
+              />
 
-    <motion.span
-      animate={open ? { rotate: -45, y: 0 } : { rotate: 0, y: 5 }}
-      transition={{
-        type: "spring",
-        stiffness: 260,
-        damping: 22,
-      }}
-      className="absolute w-5 h-[1.5px] bg-white origin-center"
-    />
+              <motion.span
+                animate={open ? { rotate: -45, y: 0 } : { rotate: 0, y: 5 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 22,
+                }}
+                className="absolute w-5 h-[1.5px] bg-white origin-center"
+              />
 
-  </div>
-
-  {/* LABEL */}
-  <motion.span
-    key={open ? "close" : "menu"}
-    initial={{ opacity: 0, y: 6 }}
-    animate={{ opacity: 1, y: 0 }}
-    exit={{ opacity: 0, y: -6 }}
-    transition={{ duration: 0.2 }}
-    className="leading-none flex items-center"
-  >
-    {open ? "Close" : "Menu"}
-  </motion.span>
-</button>
+            </div>
+ 
+            <motion.span
+              key={open ? "close" : "menu"}
+              initial={{ opacity: 0, y: 6 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -6 }}
+              transition={{ duration: 0.2 }}
+              className="leading-none flex items-center"
+            >
+              {open ? "Close" : "Menu"}
+            </motion.span>
+          </button>
 
 
 
-          {/* Logo */}
+      
           <Link href="/" className="absolute left-1/2 -translate-x-1/2">
             <img src="assest/celebso.webp" alt="Celebso" className="w-28" />
           </Link>
 
-          {/* Enquiry Icon */}
+     
           <Link
             href="/enquiry"
             className="p-2 rounded-full bg-[#444] hover:bg-[#555]"
@@ -82,49 +79,64 @@ export default function Header() {
           </Link>
         </div>
 
-      <AnimatePresence mode="wait">
+     <AnimatePresence mode="wait">
   {open && (
     <motion.div
+      key="nav-wrapper"
+      
       initial={{ clipPath: "inset(0 0 100% 0)", opacity: 0 }}
       animate={{ clipPath: "inset(0 0 0% 0)", opacity: 1 }}
       exit={{ clipPath: "inset(0 0 100% 0)", opacity: 0 }}
-      transition={{
-        duration: 0.6,
-        ease: "easeInOut",
-        delay: open ? 0 : 0.45    
+      transition={{ 
+        duration: 0.8, 
+        ease: [0.76, 0, 0.24, 1] 
       }}
+      className="overflow-hidden bg-black/90 w-full"
     >
       <nav className="flex flex-col md:flex-row justify-center items-center gap-6 py-10 border-t border-[#fcb900]">
-
         {[
           { name: "Home", href: "/" },
           { name: "About", href: "/about" },
           { name: "Services", href: "/services" },
           { name: "Enquiry", href: "/enquiry" },
           { name: "Login", href: "/login" },
-        ].map((item, i) => (
+        ].map((item, i, array) => (
           <motion.a
             key={item.name}
             href={item.href}
-            initial={{ opacity: 0, y: 40, x: 0 }}      
-            animate={{ opacity: 1, y: 0, x: 0 }}       
-            exit={{ opacity: 0, y: 40, x: -40 }}     
-            transition={{
-              duration: 0.35,
-              ease: "easeInOut",
-              delay: i * 0.08               
+             
+            initial={{ opacity: 0, y: 60 }}
+           
+            animate={{ 
+              opacity: 1, 
+              y: 0,
+              transition: {
+                duration: 0.7,
+                delay: 0.2 + (i * 0.1),  
+                ease: [0.215, 0.61, 0.355, 1] 
+              }
             }}
-            className="text-[6vw] md:text-[1.2vw] capitalize font-medium tracking-wide text-white/90 hover:text-[#fcb900] transition"
+            
+            exit={{ 
+              opacity: 0, 
+              y: 60,
+              transition: {
+                duration: 0.5,
+                 
+               
+                delay: (array.length - 1 - i) * 0.08, 
+                ease: [0.76, 0, 0.24, 1]
+              }
+            }}
+            className="text-[6vw] md:text-[1.2vw] capitalize font-medium tracking-wide text-white/90 hover:text-[#fcb900] transition-colors"
           >
             {item.name}
           </motion.a>
         ))}
-
       </nav>
     </motion.div>
   )}
 </AnimatePresence>
-
 
 
 

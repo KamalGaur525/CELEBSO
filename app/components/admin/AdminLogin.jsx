@@ -4,14 +4,12 @@ export default function AdminLogin() {
   return (
     <div className="min-h-screen bg-[#0e0e0e] flex items-center justify-center px-4">
       <div className="relative w-full max-w-md">
-        
-        {/* Glow */}
+ 
         <div className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-[#fcb900]/30 via-transparent to-transparent blur-xl opacity-40" />
 
-        {/* Card */}
+ 
         <form className="relative bg-[#141414] border border-white/10 rounded-2xl p-8 space-y-6 backdrop-blur">
-          
-          {/* Header */}
+       
           <div className="space-y-2">
             <h1 className="text-2xl font-semibold tracking-tight text-white">
               Admin Access
@@ -21,7 +19,7 @@ export default function AdminLogin() {
             </p>
           </div>
 
-          {/* Email */}
+           
           <div className="space-y-1">
             <label className="text-xs uppercase tracking-widest text-white/40">
               Email
@@ -33,8 +31,7 @@ export default function AdminLogin() {
               className="w-full bg-transparent border-b border-white/20 py-3 text-white outline-none placeholder:text-white/30 focus:border-[#fcb900] transition"
             />
           </div>
-
-          {/* Password */}
+ 
           <div className="space-y-1">
             <label className="text-xs uppercase tracking-widest text-white/40">
               Password
@@ -47,7 +44,7 @@ export default function AdminLogin() {
             />
           </div>
 
-          {/* Submit */}
+        
           <button
             type="submit"
             className="w-full mt-6 py-3 bg-[#fcb900] text-black text-sm font-medium uppercase tracking-wider hover:brightness-110 transition disabled:opacity-50"
@@ -55,7 +52,7 @@ export default function AdminLogin() {
             Enter Dashboard
           </button>
 
-          {/* Back link */}
+        
           <div className="mt-6 text-center">
             <a
               href="/"

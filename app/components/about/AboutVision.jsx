@@ -2,8 +2,7 @@ export default function AboutVision() {
   return (
     <section className="max-w-7xl mx-auto px-6 py-24 border-t border-black/10">
       <div className="grid md:grid-cols-2 gap-16 text-[#312e2e]">
-        
-        {/* Our Vision */}
+          
         <div>
           <h2 className="text-3xl font-bold mb-6">
             Our Vision
@@ -14,8 +13,7 @@ export default function AboutVision() {
             remembered on the world stage.
           </p>
         </div>
-
-        {/* Why We Exist */}
+ 
         <div>
           <h2 className="text-3xl font-bold mb-6">
             Why We Exist
